@@ -32,18 +32,18 @@
 	);
 
 // Palette.
-	$palette: (
-		bg:					#312450,
-		bg-alt:				darken(#312450, 5),
-		fg:					rgba(255,255,255,0.55),
-		fg-bold:			#ffffff,
-		fg-light:			rgba(255,255,255,0.35),
-		border:				rgba(255,255,255,0.15),
-		border-bg:			rgba(255,255,255,0.05),
-		accent1:			#5e42a6,
-		accent1-alt:		darken(#5e42a6, 10),
-		accent2:			#5052b5,
-		accent2-alt:		darken(#5052b5, 10),
-		accent3:			#b74e91,
-		accent3-alt:		darken(#b74e91, 10)
-	);
+$palette: (
+    bg:                 #f8bbd0, // Soft pink as the primary background color
+    bg-alt:             darken(#f8bbd0, 5%), // Slightly darker for alternate backgrounds
+    fg:                 rgba(0, 0, 0, 0.65), // Dark text for readability on light background
+    fg-bold:            #000000, // Bold text for important elements
+    fg-light:           rgba(0, 0, 0, 0.45), // Lighter text for less emphasis
+    border:             rgba(0, 0, 0, 0.2), // Borders slightly more visible
+    border-bg:          rgba(0, 0, 0, 0.1), // Very light borders for background elements
+    accent1:            #ff8a80, // Light red-pink for primary accents
+    accent1-alt:        darken(#ff8a80, 10%), // Darkened accent for contrast
+    accent2:            #ff80ab, // Another shade of pink for secondary accents
+    accent2-alt:        darken(#ff80ab, 10%), // Darkened secondary accent
+    accent3:            #ffccbc, // Lighter pink as tertiary accent
+    accent3-alt:        darken(#ffccbc, 10%) // Darkened tertiary accent
+);
