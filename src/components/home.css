@@ -1,0 +1,107 @@
+/* src/components/Home.css */
+
+/* container uses native scroll with snap as fallback */
+.home-scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  background: linear-gradient(180deg, #f1a1a5 0%, #f7c1c4 100%);
+}
+
+/* full-page sections stacked vertically */
+.home-section {
+  scroll-snap-align: start;
+  width: 100%;
+  min-height: 100vh;         /* each section occupies the full viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* inner wrapper so section content doesn't touch edges and can be centered */
+.section-inner {
+  width: 92%;
+  max-width: 1100px;
+  padding: 2.2rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  color: white; /* all sections use white text now */
+}
+
+/* distinct gradients per section with slightly darker shades for readability */
+.about-me .section-inner {
+  background: linear-gradient(135deg, #e37383 0%, #f7a8ab 100%);
+}
+
+.projects-snippet .section-inner {
+  background: linear-gradient(135deg, #d86b78 0%, #ee929c 100%);
+}
+
+.contact-snippet .section-inner {
+  background: linear-gradient(135deg, #df7f87 0%, #f5aab0 100%);
+}
+
+/* headings and text */
+.section-inner h1, .section-inner h2 {
+  margin: 0 0 1rem 0;
+  line-height: 1.05;
+}
+.section-inner p {
+  margin: 0.25rem 0 1rem 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA link */
+.home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #da485d;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.home-link:hover {
+  background: #da485d;
+  color: white;
+}
+
+/* responsive: reduce padding on small screens */
+@media (max-width: 720px) {
+  .section-inner { padding: 1.25rem; border-radius: 12px; width: 94%; }
+  .home-link { padding: 0.6rem 1rem; }
+}
+
+/* Scroll indicator dots */
+.scroll-indicator {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  z-index: 50;
+}
+
+.scroll-indicator .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transition: background 0.3s;
+}
+
+.scroll-indicator .dot.active {
+  background: white;
+}
+

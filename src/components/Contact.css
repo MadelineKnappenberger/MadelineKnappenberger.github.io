@@ -1,0 +1,47 @@
+/* src/components/Contact.css */
+
+.contact-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* slightly darker, muted pink gradient similar to Projects page */
+  background: linear-gradient(135deg, #e7b0b5 0%, #f2c4c8 100%);
+}
+
+.contact-inner {
+  text-align: center;
+  background: rgba(200, 120, 130, 0.85); /* darker, more opaque pink */
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  max-width: 600px;
+}
+
+.contact-inner h1 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact-inner p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  color: white; /* icons remain white */
+  font-size: 2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #ffd1d4; /* subtle highlight on hover */
+}

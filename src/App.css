@@ -1,0 +1,115 @@
+/* src/App.css - global + hamburger/overlay */
+
+:root{
+  --pink-1: #E37383;
+  --pink-2: #DA485D;
+  --accent: #DA485D;
+  --light: #fff;
+  --text: #222;
+}
+
+/* Basic page gradient background (smooth, not tiled) */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, #f7a7af 0%, #f8c1c7 50%, #f9dee1 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make <main> full width */
+main {
+  width: 100%;
+}
+
+/* HAMBURGER (top-right) */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 22px;
+  z-index: 9999;
+  width: 44px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.hamburger:focus { outline: 3px solid rgba(0,0,0,0.15); border-radius:6px; }
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--pink-2);
+  border-radius: 3px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0.2); }
+.hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+/* OVERLAY MENU */
+.overlay-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 17, 17, 0.88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+  transform: scale(0.98);
+  z-index: 9998;
+}
+.overlay-menu.visible {
+  pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay-inner {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+.overlay-inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.overlay-inner li {
+  margin: 1.25rem 0;
+}
+.overlay-inner a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+.overlay-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* small screens adjustments */
+@media (max-width: 640px) {
+  .hamburger { top: 14px; right: 14px; width: 40px; height: 34px; }
+  .overlay-inner a { font-size: 1.3rem; }
+}
