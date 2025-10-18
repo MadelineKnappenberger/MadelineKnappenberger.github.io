@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="contact-inner">
         <h1>About & Contact</h1>
         <p>
-          Hi! I’m Maddie — a data analyst and junior web developer based in Bellingham, Washington.  
+          Hi! I’m Maddie — a data analyst and web developer based in Bellingham, Washington.  
           I have a BS in Data Science from Western Washington University, alongside years of web development/admin and data analytics experience!
         </p>
         <p>
