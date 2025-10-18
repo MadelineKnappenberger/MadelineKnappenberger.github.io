@@ -1,7 +1,7 @@
 // src/components/Projects.jsx
 import React, { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import './Projects.css';
+import './projects.css';
 
 export default function Projects() {
   const [openIndex, setOpenIndex] = useState(null);
