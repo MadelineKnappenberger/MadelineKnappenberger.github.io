@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Home.css';
+import './home.css';
 
 export default function Home() {
   const containerRef = useRef(null);
