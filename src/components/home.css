@@ -4,6 +4,8 @@
 .home-scroll-container {
   height: 100vh;
   overflow-y: auto;
+  position: relative;
+  overflow: hidden;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
 
@@ -97,11 +99,11 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.5);
+  background: rgba(218, 72, 93, 0.4);
   transition: background 0.3s;
 }
 
 .scroll-indicator .dot.active {
-  background: white;
+  background: #da485d;
 }
 
