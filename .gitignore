@@ -1,12 +1,3 @@
-# Node modules
 node_modules/
-
-# Build output
 dist/
-
-# Vite cache
-.vite/
-
-# Optional OS files
-.DS_Store
-Thumbs.db
+.env
