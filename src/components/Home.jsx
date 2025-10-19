@@ -255,7 +255,7 @@ export default function Home() {
         <section className="home-section about-me">
           <div className="section-inner">
             <h1>Hi! I'm Maddie!</h1>
-            <p>Data analyst & web developer. I build data-driven, accessible web experiences.</p>
+            <p>Web developer & data analyst. I build data-driven, accessible web experiences.</p>
             <a className="home-link" href="/contact">About →</a>
           </div>
         </section>
